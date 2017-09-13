@@ -1,0 +1,11 @@
+C:\Users\Georg\source\repos\data-structures\strings\strings\bin\Debug\netcoreapp2.0\strings.deps.json
+C:\Users\Georg\source\repos\data-structures\strings\strings\bin\Debug\netcoreapp2.0\strings.runtimeconfig.json
+C:\Users\Georg\source\repos\data-structures\strings\strings\bin\Debug\netcoreapp2.0\strings.runtimeconfig.dev.json
+C:\Users\Georg\source\repos\data-structures\strings\strings\bin\Debug\netcoreapp2.0\strings.dll
+C:\Users\Georg\source\repos\data-structures\strings\strings\bin\Debug\netcoreapp2.0\strings.pdb
+C:\Users\Georg\source\repos\data-structures\strings\strings\obj\Debug\netcoreapp2.0\strings.csprojResolveAssemblyReference.cache
+C:\Users\Georg\source\repos\data-structures\strings\strings\obj\Debug\netcoreapp2.0\strings.csproj.CoreCompileInputs.cache
+C:\Users\Georg\source\repos\data-structures\strings\strings\obj\Debug\netcoreapp2.0\strings.AssemblyInfoInputs.cache
+C:\Users\Georg\source\repos\data-structures\strings\strings\obj\Debug\netcoreapp2.0\strings.AssemblyInfo.cs
+C:\Users\Georg\source\repos\data-structures\strings\strings\obj\Debug\netcoreapp2.0\strings.dll
+C:\Users\Georg\source\repos\data-structures\strings\strings\obj\Debug\netcoreapp2.0\strings.pdb
