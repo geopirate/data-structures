@@ -6,13 +6,13 @@ namespace LinkedListFindRandom
 {
     class Node
     {
-        public Node next;
-        public Object data;
+        public Node Next;
+        public Object Data;
 
         public Node(Object thisData)
         {
-            data = thisData;
-            next = null;
+            Data = thisData;
+            Next = null;
         }
     }
 }

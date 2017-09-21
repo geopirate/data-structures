@@ -16,7 +16,7 @@ namespace LinkedListFindRandom
 
             if (head == null)
             {
-                toAdd.next = head;
+                toAdd.Next = head;
                 head = toAdd;
             }
             else
@@ -24,12 +24,12 @@ namespace LinkedListFindRandom
                 Node current = head;
 
                 //Console.WriteLine(current.data);
-                while (current.next != null)
+                while (current.Next != null)
                 {
-                    current = current.next;
+                    current = current.Next;
                     //Console.WriteLine(current.data);
                 }
-                current.next = toAdd;
+                current.Next = toAdd;
             }
             count++;
             if (count % 2 == 1)
@@ -47,11 +47,11 @@ namespace LinkedListFindRandom
             else
             {
                 Node current = head;
-                Console.WriteLine(current.data);
-                while (current.next != null)
+                Console.WriteLine(current.Data);
+                while (current.Next != null)
                 {
-                    current = current.next;
-                    Console.WriteLine(current.data);
+                    current = current.Next;
+                    Console.WriteLine(current.Data);
                 }
             }
         }
@@ -68,20 +68,17 @@ namespace LinkedListFindRandom
                 Node current = head;
                 while (listIndex < middle)
                 {
-                    current = current.next;
+                    current = current.Next;
                     listIndex++;
                 }
-                Console.WriteLine(current.data);
+                Console.WriteLine(current.Data);
             }
         }
-
+        
+        // find the data of the node x from the end
         public void PrintRandom(int x)
         {
-            int listIndex = 0;/*
-            if (x == -1 || x > count)
-            {
-                Console.WriteLine("Did not find the integer");
-            }*/
+            int listIndex = 0;
             if (head == null)
             {
                 Console.WriteLine("The list is empty.");
@@ -90,25 +87,24 @@ namespace LinkedListFindRandom
             {
                 Node current = head;
                 Node random = head;
-                while (current.next != null)
+                while (current.Next != null)
                 {
-                    current = current.next;
-                    //Console.Write("Current is " + current.data);
-                    //Console.WriteLine(" random is " + random.data);
-
+                    current = current.Next;
                     listIndex++;
-                    if(listIndex > x)
+                    if (listIndex > x)
                     {
-                        random = random.next;
+                        random = random.Next;
                     }
                 }
-                Console.Write(random.data);
+                Console.WriteLine();
+                Console.WriteLine($"The node {random.Data} is {x} from the end" );
             }
         }
 
-        public int FindData(Object z)
+        public void FindData(Object z)
         {
-            int listIndex = 0;
+            int listIndex= 0;
+            int foundIndex;
             if (head == null)
             {
                 Console.WriteLine("list is empty");
@@ -116,19 +112,18 @@ namespace LinkedListFindRandom
             else
             {
                 Node current = head;
-                Console.WriteLine(current.data);
-                while (current.next != null)
+                while (current.Next != null)
                 {
-                    current = current.next;
-                    if(current.data == z)
-                    {
-                        return listIndex;
+                    if(current.Data == z)
+                    { 
+                        foundIndex = listIndex;
                     }
-                    Console.WriteLine(current.data + " is the node at " + z + " from the end.");
+                    current = current.Next;
+                    
                     listIndex++;
                 }
+                Console.WriteLine(z + " is at node " + listIndex + ".");
             }
-            return -1;
         }
 
     }
