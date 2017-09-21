@@ -1,0 +1,11 @@
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\bin\Debug\netcoreapp2.0\LinkedListFindRandom.deps.json
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\bin\Debug\netcoreapp2.0\LinkedListFindRandom.runtimeconfig.json
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\bin\Debug\netcoreapp2.0\LinkedListFindRandom.runtimeconfig.dev.json
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\bin\Debug\netcoreapp2.0\LinkedListFindRandom.dll
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\bin\Debug\netcoreapp2.0\LinkedListFindRandom.pdb
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\obj\Debug\netcoreapp2.0\LinkedListFindRandom.csprojResolveAssemblyReference.cache
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\obj\Debug\netcoreapp2.0\LinkedListFindRandom.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\obj\Debug\netcoreapp2.0\LinkedListFindRandom.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\obj\Debug\netcoreapp2.0\LinkedListFindRandom.AssemblyInfo.cs
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\obj\Debug\netcoreapp2.0\LinkedListFindRandom.dll
+C:\Users\georg\source\repos\data-structures\LinkedListFindRandom\LinkedListFindRandom\obj\Debug\netcoreapp2.0\LinkedListFindRandom.pdb
