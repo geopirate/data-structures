@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DoublyLinkedList\\DoublyLinkedList",
+    "\\DoublyLinkedList\\DoublyLinkedList\\obj"
   ],
   "PreviewInSolutionExplorer": false
 }

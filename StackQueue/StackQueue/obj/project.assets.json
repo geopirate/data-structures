@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\georg\\Source\\Repos\\data-structures\\LinkedListFindRandom\\LinkedListFindRandom\\LinkedListFindRandom.csproj",
-      "projectName": "LinkedListFindRandom",
-      "projectPath": "C:\\Users\\georg\\Source\\Repos\\data-structures\\LinkedListFindRandom\\LinkedListFindRandom\\LinkedListFindRandom.csproj",
+      "projectUniqueName": "C:\\Users\\georg\\source\\repos\\data-structures\\StackQueue\\StackQueue\\StackQueue.csproj",
+      "projectName": "StackQueue",
+      "projectPath": "C:\\Users\\georg\\source\\repos\\data-structures\\StackQueue\\StackQueue\\StackQueue.csproj",
       "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\georg\\Source\\Repos\\data-structures\\LinkedListFindRandom\\LinkedListFindRandom\\obj\\",
+      "outputPath": "C:\\Users\\georg\\source\\repos\\data-structures\\StackQueue\\StackQueue\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
