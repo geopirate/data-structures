@@ -39,20 +39,31 @@ namespace Palindrome
 
         public bool Check()
         {
-            Node Forward = Head.next;
-            Node Backwards = Tail.previous;
+            Node Forward = Head;
+            Node Backwards = Tail;
 
             while (Forward.next != Backwards && Forward.next != Backwards.previous)
             {
-                if (!Forward.data.Equals(Backwards.data))
+                if (!Forward.next.data.Equals(Backwards.previous.data))
                 {
                     return false;
                 }
-                Console.WriteLine($"{Forward.data} and {Backwards.data}");
                 Forward = Forward.next;
                 Backwards = Backwards.previous;
             }
             return true;
+        }
+
+        public void CheckText(bool isa)
+        {
+            if (isa)
+            {
+                Console.WriteLine($" is a palindrome.\n");
+            }
+            else
+            {
+                Console.WriteLine($" is not a palindrome.\n");
+            }
         }
 
         public void PrintList()

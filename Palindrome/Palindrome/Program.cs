@@ -6,39 +6,22 @@ namespace Palindrome
     {
         static void Main(string[] args)
         {
-            char a = 'a';
-            char b = 'b';
-            if (a == b)
-            {
-                Console.WriteLine("Hello World!");
-            }
-
-
+            Console.Write("Palindrome Checker\n\n");
             DoubleList newlist = new DoubleList();
             newlist.Converter("tacocat");
-            
             newlist.PrintList();
-            if (newlist.Check())
-            {
-                Console.WriteLine($" is a palindrome.\n");
-            }
-            else
-            {
-                Console.WriteLine($" is not a palindrome.\n");
-            }
+            newlist.CheckText(newlist.Check());
 
             DoubleList newlist2 = new DoubleList();
-            newlist2.Converter("monkeyb");
-            
+            newlist2.Converter("monkey");
             newlist2.PrintList();
-            if (newlist2.Check())
-            {
-                Console.WriteLine($" is a palindrome.\n");
-            }
-            else
-            {
-                Console.WriteLine($" is not a palindrome.\n");
-            }
+            newlist2.CheckText(newlist2.Check());
+
+            Console.Write("Please enter a string to check: ");
+            DoubleList newlist3 = new DoubleList();
+            newlist3.Converter(Console.ReadLine());
+            newlist3.PrintList();
+            newlist3.CheckText(newlist3.Check());
 
             Console.Read();
         }

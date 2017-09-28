@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\georg\\.nuget\\packages\\": {},
+    "C:\\Users\\Georg\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +673,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\georg\\source\\repos\\data-structures\\Palindrome\\Palindrome\\Palindrome.csproj",
+      "projectUniqueName": "C:\\Users\\Georg\\Source\\Repos\\data-structures\\Palindrome\\Palindrome\\Palindrome.csproj",
       "projectName": "Palindrome",
-      "projectPath": "C:\\Users\\georg\\source\\repos\\data-structures\\Palindrome\\Palindrome\\Palindrome.csproj",
-      "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\georg\\source\\repos\\data-structures\\Palindrome\\Palindrome\\obj\\",
+      "projectPath": "C:\\Users\\Georg\\Source\\Repos\\data-structures\\Palindrome\\Palindrome\\Palindrome.csproj",
+      "packagesPath": "C:\\Users\\Georg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Georg\\Source\\Repos\\data-structures\\Palindrome\\Palindrome\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
