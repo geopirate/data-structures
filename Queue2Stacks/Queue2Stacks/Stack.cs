@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Queue2Stacks
+﻿namespace Queue2Stacks
 {
     class Stack
     {
@@ -26,24 +22,8 @@ namespace Queue2Stacks
         public object Pop(bool e)
         {
             Node curr = Head;
-            Head = Head.Next;
+            Head = curr.Next;
             return curr.Data;
-        }
-
-        public void Print()
-        {
-            if(Head == null)
-            {
-                return;
-            }
-            Node curr = Head;
-            Console.Write($"{curr.Data} => ");
-            while (curr.Next != null)
-            {
-                curr = curr.Next;
-                Console.Write($"{curr.Data} => ");
-                
-            }
         }
     }
 }
