@@ -1,0 +1,11 @@
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\bin\Debug\netcoreapp2.0\StackSort.deps.json
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\bin\Debug\netcoreapp2.0\StackSort.runtimeconfig.json
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\bin\Debug\netcoreapp2.0\StackSort.runtimeconfig.dev.json
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\bin\Debug\netcoreapp2.0\StackSort.dll
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\bin\Debug\netcoreapp2.0\StackSort.pdb
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\obj\Debug\netcoreapp2.0\StackSort.csprojResolveAssemblyReference.cache
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\obj\Debug\netcoreapp2.0\StackSort.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\obj\Debug\netcoreapp2.0\StackSort.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\obj\Debug\netcoreapp2.0\StackSort.AssemblyInfo.cs
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\obj\Debug\netcoreapp2.0\StackSort.dll
+C:\Users\georg\source\repos\data-structures\StackSort\StackSort\obj\Debug\netcoreapp2.0\StackSort.pdb
