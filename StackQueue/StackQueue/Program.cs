@@ -66,3 +66,9 @@ namespace StackQueue
         }
     }
 }
+/* Make sure your pop and dequeue methods return a value, 
+ * and when you have one element left in the the stack or queue, it should pop or dequeue  the head.
+ * At present the head is a node with a null value, which should not be there.
+ * Also it is more efficient to have the pop and push methods add and remove from the head of the stack. 
+ * When adding and removing from the tail, you increase the time complexity from O(1) to O(N).
+ */

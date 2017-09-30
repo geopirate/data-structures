@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace StackQueue
 {
@@ -34,8 +32,6 @@ namespace StackQueue
                     Console.Write($"{current.Data} => ");
                 }
             }
-        }
-
-        
+        } 
     }
 }

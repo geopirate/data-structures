@@ -7,9 +7,11 @@ namespace StackQueue
         // add
         public void Push(object thisData)
         {
-            Node toPush = new Node(thisData);
-
-            FindTail().Next = toPush;
+            Node toPush = new Node(thisData)
+            {
+                Next = head
+            };
+            head = toPush;
         }
         // delete
         public void Pop()
