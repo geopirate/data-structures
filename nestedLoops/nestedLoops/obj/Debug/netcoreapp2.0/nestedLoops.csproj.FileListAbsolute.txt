@@ -1,0 +1,11 @@
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\bin\Debug\netcoreapp2.0\nestedLoops.deps.json
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\bin\Debug\netcoreapp2.0\nestedLoops.runtimeconfig.json
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\bin\Debug\netcoreapp2.0\nestedLoops.runtimeconfig.dev.json
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\bin\Debug\netcoreapp2.0\nestedLoops.dll
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\bin\Debug\netcoreapp2.0\nestedLoops.pdb
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\obj\Debug\netcoreapp2.0\nestedLoops.csprojResolveAssemblyReference.cache
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\obj\Debug\netcoreapp2.0\nestedLoops.csproj.CoreCompileInputs.cache
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\obj\Debug\netcoreapp2.0\nestedLoops.AssemblyInfoInputs.cache
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\obj\Debug\netcoreapp2.0\nestedLoops.AssemblyInfo.cs
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\obj\Debug\netcoreapp2.0\nestedLoops.dll
+C:\Users\georg\source\repos\data-structures\nestedLoops\nestedLoops\obj\Debug\netcoreapp2.0\nestedLoops.pdb
