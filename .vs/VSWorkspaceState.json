@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Palindrome",
+    "\\Queue2Stacks"
   ],
+  "SelectedNode": "\\Queue2Stacks\\Queue2Stacks.sln",
   "PreviewInSolutionExplorer": false
 }
