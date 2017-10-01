@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace StackQueue
+﻿namespace StackQueue
 {
     class Stack : LinkedList
     {
@@ -14,26 +12,9 @@ namespace StackQueue
             head = toPush;
         }
         // delete
-        public void Pop()
+        public Node Pop()
         {
-            Node current = head;
-
-            if ( current.Next == null)
-            {
-                Console.WriteLine("Sorry the Queue is empty!");
-            }
-            else if (current.Next.Next == null)
-            {
-                current.Next = null;
-            }
-            else
-            {
-                while (current.Next.Next != null)
-                {
-                    current = current.Next;
-                }
-                current.Next = null;
-            }
+            return Delete();
         }
     }
 }

@@ -9,6 +9,9 @@ namespace StackQueue
             Stack newStack = new Stack();
 
             Console.Write("The Stack      : ");
+            newStack.PrintList();
+
+            Console.Write("\nPush the Stack  : ");
             newStack.Push("first");            
             newStack.PrintList();
 
@@ -20,25 +23,24 @@ namespace StackQueue
             newStack.Push("third");
             newStack.PrintList();
 
-            Console.Write("\nPop the Stack  : ");
-            newStack.Pop();
-            newStack.PrintList();
-            
-            Console.Write("\nPop the Stack  : ");
-            newStack.Pop();
-            newStack.PrintList();
-            
-            Console.Write("\nPop the Stack  : ");
-            newStack.Pop();
+            Console.Write($"\nPop *{newStack.Pop().Data}* off the Stack  : ");
             newStack.PrintList();
 
-            Console.Write("\nPop the Stack  : ");
-            newStack.Pop();
+            Console.Write($"\nPop *{newStack.Pop().Data}* off the Stack  : ");
+            newStack.PrintList();
+
+            Console.Write($"\nPop *{newStack.Pop().Data}* off the Stack  : ");
+            newStack.PrintList();
+
+            Console.Write($"\nPop *{newStack.Pop().Data}* off the Stack  : ");
             newStack.PrintList();
 
             Queue newQueue = new Queue();
 
             Console.Write("\n\nThe Queue         : ");
+            newQueue.PrintList();
+
+            Console.Write("\nEnqueue the Queue : ");
             newQueue.Enqueue("first");
             newQueue.PrintList();
 
@@ -50,16 +52,16 @@ namespace StackQueue
             newQueue.Enqueue("third");
             newQueue.PrintList();
 
-            Console.Write("\nDequeue the Queue : ");
-            newQueue.Dequeue();
+            Console.Write($"\nDequeue *{newQueue.Dequeue().Data}* from the que  : ");
             newQueue.PrintList();
 
-            Console.Write("\nDequeue the Queue : ");
-            newQueue.Dequeue();
+            Console.Write($"\nDequeue *{newQueue.Dequeue().Data}* from the que  : ");
             newQueue.PrintList();
 
-            Console.Write("\nDequeue the Queue : ");
-            newQueue.Dequeue();
+            Console.Write($"\nDequeue *{newQueue.Dequeue().Data}* from the que  : ");
+            newQueue.PrintList();
+
+            Console.Write($"\nDequeue *{newQueue.Dequeue().Data}* from the que  : ");
             newQueue.PrintList();
 
             Console.Read();
