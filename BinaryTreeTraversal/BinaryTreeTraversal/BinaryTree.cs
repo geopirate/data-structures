@@ -8,55 +8,35 @@ namespace BinaryTreeTraversal
         public Node Root;
 
         // initializes the tree with a root node
-        public BinaryTree() => Root = new Node(null);
+        public BinaryTree() => Root = null;
 
-        public void GetChildren(Node Current)
+        public void PreOrder(Node Current)
         {
-            Console.Write($"{Current.Value} ");
-            if (Current.Left != null) { GetChildren(Current.Left); }
-            if (Current.Right != null) { GetChildren(Current.Right); }
-            return;
-        }
-        /* started working on an add method, but this still needs some work
-        public void FindLeaf(int childValue)
-        {
-            Leaf current = Root;
-
-            bool searching = true;
-
-            while (searching)
+            if (Current != null)
             {
-                if(current.Left != null && current.Right != null)
-                {
-                    current = current.Left;
-                }
-                else if(current.Left == null)
-                {
-                    Add(current, childValue);
-                }
-                else if(current.Right == null)
-                {
-                    Add(current, childValue);
-                }
+                Console.Write($"{Current.Value} ");
+                PreOrder(Current.Left);
+                PreOrder(Current.Right);
             }
         }
-
-        public void Add(Leaf parent, int child)
+        public void PostOrder(Node Current)
         {
-            if (parent.Left == null)
+            if (Current != null)
             {
-                parent.Left = new Leaf(child);
+                PostOrder(Current.Left);
+                PostOrder(Current.Right);
+                Console.Write($"{Current.Value} ");
             }
-            else if (parent.Right == null)
+        }
+        public void InOrder(Node Current)
+        {
+            if (Current != null)
             {
-                parent.Right = new Leaf(child);
+                InOrder(Current.Left);
+                Console.Write($"{Current.Value} ");
+                InOrder(Current.Right);
             }
-            else
-            {
-                return;
-            }
-        }*/
-
+        }
     }
     public class Node
     {
@@ -72,3 +52,43 @@ namespace BinaryTreeTraversal
         }
     }
 }
+
+/* started working on an add method, but this still needs some work
+public void FindLeaf(int childValue)
+{
+    Leaf current = Root;
+
+    bool searching = true;
+
+    while (searching)
+    {
+        if(current.Left != null && current.Right != null)
+        {
+            current = current.Left;
+        }
+        else if(current.Left == null)
+        {
+            Add(current, childValue);
+        }
+        else if(current.Right == null)
+        {
+            Add(current, childValue);
+        }
+    }
+}
+
+public void Add(Leaf parent, int child)
+{
+    if (parent.Left == null)
+    {
+        parent.Left = new Leaf(child);
+    }
+    else if (parent.Right == null)
+    {
+        parent.Right = new Leaf(child);
+    }
+    else
+    {
+        return;
+    }
+}*/
