@@ -21,15 +21,16 @@ namespace BinaryTreeTraversal
 
             while (tree.Count > 0)
             {
-                if (Current.Left != null)
+                Node Counter = tree.Dequeue();
+                if (Counter.Left != null)
                 {
-                    tree.Enqueue(Current.Left);
+                    tree.Enqueue(Counter.Left);
                 }
-                if (Current.Right != null)
+                if (Counter.Right != null)
                 {
-                    tree.Enqueue(Current.Right);
+                    tree.Enqueue(Counter.Right);
                 }
-                Console.Write($"{Current.Value} ");
+                Console.Write($"{Counter.Value} ");
             }
         }
 

@@ -21,7 +21,7 @@ namespace BinaryTreeTraversal
             // new traversal code
             Console.WriteLine("This traverses a binary tree Breadth Order.");
             myTree.BreadthOrder(myTree.Root);
-            Console.WriteLine("This traverses a binary tree Pre Order.");
+            Console.WriteLine("\nThis traverses a binary tree Pre Order.");
             myTree.PreOrder(myTree.Root);
             Console.WriteLine("\nThis traverses a binary tree Post Order.");
             myTree.PostOrder(myTree.Root);
