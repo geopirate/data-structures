@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BinaryTreeTraversal
 {
@@ -9,6 +10,28 @@ namespace BinaryTreeTraversal
 
         // initializes the tree with a root node
         public BinaryTree() => Root = null;
+
+        public void BreadthOrder(Node Current)
+        {
+            Queue<Node> tree = new Queue<Node>();
+
+            if(Current == null) { return; }
+
+            tree.Enqueue(Current);
+
+            while (tree.Count > 0)
+            {
+                if (Current.Left != null)
+                {
+                    tree.Enqueue(Current.Left);
+                }
+                if (Current.Right != null)
+                {
+                    tree.Enqueue(Current.Right);
+                }
+                Console.Write($"{Current.Value} ");
+            }
+        }
 
         public void PreOrder(Node Current)
         {
