@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Palindrome",
-    "\\Queue2Stacks"
+    "\\StackQueue",
+    "\\StackSort"
   ],
-  "SelectedNode": "\\Queue2Stacks\\Queue2Stacks.sln",
+  "SelectedNode": "\\StackSort\\StackSort.sln",
   "PreviewInSolutionExplorer": false
 }
