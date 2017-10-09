@@ -664,7 +664,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\georg\\.nuget\\packages\\": {},
+    "C:\\Users\\Georg\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -673,17 +673,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\georg\\source\\repos\\data-structures\\StackQueue\\StackQueue\\StackQueue.csproj",
+      "projectUniqueName": "C:\\Users\\Georg\\OneDrive\\Documents\\GitHub\\data-structures\\StackQueue\\StackQueue\\StackQueue.csproj",
       "projectName": "StackQueue",
-      "projectPath": "C:\\Users\\georg\\source\\repos\\data-structures\\StackQueue\\StackQueue\\StackQueue.csproj",
-      "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\georg\\source\\repos\\data-structures\\StackQueue\\StackQueue\\obj\\",
+      "projectPath": "C:\\Users\\Georg\\OneDrive\\Documents\\GitHub\\data-structures\\StackQueue\\StackQueue\\StackQueue.csproj",
+      "packagesPath": "C:\\Users\\Georg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Georg\\OneDrive\\Documents\\GitHub\\data-structures\\StackQueue\\StackQueue\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace StackQueue
 {
@@ -8,13 +6,27 @@ namespace StackQueue
     {
         public Node head = new Node(null);
 
-        public Node FindTail()
+        public LinkedList()
+        {
+            head = null;
+        }
+
+        public Node Delete()
         {
             Node current = head;
 
-            while (current.Next != null)
+            if (current == null)
+            { // empty stack
+                return new Node("Nothing left!");
+            } // one left in stack
+            else if (current.Next == null)
             {
-                current = current.Next;
+                head = null;
+            }
+            else
+            {
+                head = current.Next;
+                current.Next = null;
             }
             return current;
         }
@@ -28,14 +40,13 @@ namespace StackQueue
             else
             {
                 Node current = head;
-                while (current.Next != null)
+                while (current != null)
                 {
-                    current = current.Next;
+                    
                     Console.Write($"{current.Data} => ");
+                    current = current.Next;
                 }
             }
-        }
-
-        
+        } 
     }
 }
