@@ -1,15 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-<<<<<<< HEAD
-    "\\BinaryTreeTraversal"
+    ""
   ],
-  "SelectedNode": "\\BinaryTreeTraversal\\BinaryTreeTraversal.sln",
-=======
-    "\\StackQueue",
-    "\\StackSort"
-  ],
-  "SelectedNode": "\\StackSort\\StackSort.sln",
->>>>>>> StackQueue
   "PreviewInSolutionExplorer": false
 }
