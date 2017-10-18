@@ -54,8 +54,11 @@ namespace BinarySearchTrees
 
         public int FindMax(Node Curr)
         {
+            Console.WriteLine($" current in max is {Curr.Data}.");
             if (Curr.Right != null)
-                return FindMin(Curr.Right);
+            {
+                return FindMax(Curr.Right);
+            }
             else
                 return Curr.Data;
         }
@@ -123,7 +126,6 @@ namespace BinarySearchTrees
                 InOrder(Current.Right);
             }
         }
-
     }
     // the node class in our binary search tree
     public class Node

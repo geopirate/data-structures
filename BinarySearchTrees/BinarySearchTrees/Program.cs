@@ -19,14 +19,17 @@ namespace BinarySearchTrees
             myTree.BSTAdd(myTree.Root, 1);
             myTree.BSTAdd(myTree.Root, 5);
 
-            Console.WriteLine("This traverses a binary tree Breadth Order.");
+            /*Console.WriteLine("This traverses a binary tree Breadth Order.");
             myTree.BreadthOrder(myTree.Root);
             Console.WriteLine("\nThis traverses a binary tree Pre Order.");
             myTree.PreOrder(myTree.Root);
             Console.WriteLine("\nThis traverses a binary tree Post Order.");
-            myTree.PostOrder(myTree.Root);
+            myTree.PostOrder(myTree.Root);*/
             Console.WriteLine("\nThis traverses a binary tree In Order.");
             myTree.InOrder(myTree.Root);
+
+            Console.WriteLine($"The max is {myTree.FindMax(myTree.Root)}.");
+            Console.WriteLine($"The min is {myTree.FindMin(myTree.Root)}.");
 
             Console.Read();
         }
