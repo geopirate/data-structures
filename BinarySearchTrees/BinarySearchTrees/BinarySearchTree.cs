@@ -52,6 +52,14 @@ namespace BinarySearchTrees
                 return Curr.Data;
         }
 
+        public int FindMax(Node Curr)
+        {
+            if (Curr.Right != null)
+                return FindMin(Curr.Right);
+            else
+                return Curr.Data;
+        }
+
 
         public void BreadthOrder(Node Current)
         {
