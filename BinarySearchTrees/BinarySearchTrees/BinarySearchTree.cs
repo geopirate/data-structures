@@ -54,11 +54,8 @@ namespace BinarySearchTrees
 
         public int FindMax(Node Curr)
         {
-            Console.WriteLine($" current in max is {Curr.Data}.");
             if (Curr.Right != null)
-            {
                 return FindMax(Curr.Right);
-            }
             else
                 return Curr.Data;
         }
@@ -67,7 +64,21 @@ namespace BinarySearchTrees
         {
             if (Curr.Data == data)
             {
-
+                if (Curr.Left == null && Curr.Right == null)
+                {
+                    Curr = null;
+                    return;
+                }
+                else if (Curr.Left != null && Curr.Right == null)
+                {
+                    Curr.Data = FindMax(Curr.Left);
+                    Delete(Curr.Left, Curr.Data);
+                }
+                else
+                {
+                    Curr.Data = FindMin(Curr.Left);
+                    Delete(Curr.Right, Curr.Data);
+                }
             }
             else if (Curr.Data > data)
                 Delete(Curr.Left, data);

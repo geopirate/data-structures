@@ -28,8 +28,17 @@ namespace BinarySearchTrees
             Console.WriteLine("\nThis traverses a binary tree In Order.");
             myTree.InOrder(myTree.Root);
 
-            Console.WriteLine($"The max is {myTree.FindMax(myTree.Root)}.");
-            Console.WriteLine($"The min is {myTree.FindMin(myTree.Root)}.");
+            Console.WriteLine($"\nThe max is {myTree.FindMax(myTree.Root)}.");
+            Console.WriteLine($"\nThe min is {myTree.FindMin(myTree.Root)}.");
+
+            // change here to delete a different number
+            // some are still broken
+            int x = 17;
+            Console.WriteLine($"\nSending {x} for deletion.");
+
+            myTree.Delete(myTree.Root, x);
+            Console.WriteLine("\nThis traverses a binary tree In Order.");
+            myTree.InOrder(myTree.Root);
 
             Console.Read();
         }
