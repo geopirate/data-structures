@@ -44,6 +44,15 @@ namespace BinarySearchTrees
             }
         }
 
+        public int FindMin(Node Curr)
+        {
+            if (Curr.Left != null)
+                return FindMin(Curr.Left);
+            else
+                return Curr.Data;
+        }
+
+
         public void BreadthOrder(Node Current)
         {
             Queue<Node> tree = new Queue<Node>();
@@ -66,7 +75,6 @@ namespace BinarySearchTrees
                 Console.Write($"{Counter.Data} ");
             }
         }
-
         public void PreOrder(Node Current)
         {
             if (Current != null)
