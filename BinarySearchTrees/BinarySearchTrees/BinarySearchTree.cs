@@ -60,6 +60,19 @@ namespace BinarySearchTrees
                 return Curr.Data;
         }
 
+        public void Delete(Node Curr, int data)
+        {
+            if (Curr.Data == data)
+            {
+
+            }
+            else if (Curr.Data > data)
+                Delete(Curr.Left, data);
+            else if (Curr.Data < data)
+                Delete(Curr.Right, data);
+            else
+                Console.WriteLine("Did not find that value");
+        }
 
         public void BreadthOrder(Node Current)
         {
