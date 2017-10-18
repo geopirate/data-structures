@@ -44,6 +44,50 @@ namespace BinarySearchTrees
             }
         }
 
+        public int FindMin(Node Curr)
+        {
+            if (Curr.Left != null)
+                return FindMin(Curr.Left);
+            else
+                return Curr.Data;
+        }
+
+        public int FindMax(Node Curr)
+        {
+            if (Curr.Right != null)
+                return FindMax(Curr.Right);
+            else
+                return Curr.Data;
+        }
+
+        public void Delete(Node Curr, int data)
+        {
+            if (Curr.Data == data)
+            {
+                if (Curr.Left == null && Curr.Right == null)
+                {
+                    Curr = null;
+                    return;
+                }
+                else if (Curr.Left != null && Curr.Right == null)
+                {
+                    Curr.Data = FindMax(Curr.Left);
+                    Delete(Curr.Left, Curr.Data);
+                }
+                else
+                {
+                    Curr.Data = FindMin(Curr.Left);
+                    Delete(Curr.Right, Curr.Data);
+                }
+            }
+            else if (Curr.Data > data)
+                Delete(Curr.Left, data);
+            else if (Curr.Data < data)
+                Delete(Curr.Right, data);
+            else
+                Console.WriteLine("Did not find that value");
+        }
+
         public void BreadthOrder(Node Current)
         {
             Queue<Node> tree = new Queue<Node>();
@@ -66,7 +110,6 @@ namespace BinarySearchTrees
                 Console.Write($"{Counter.Data} ");
             }
         }
-
         public void PreOrder(Node Current)
         {
             if (Current != null)
@@ -94,7 +137,6 @@ namespace BinarySearchTrees
                 InOrder(Current.Right);
             }
         }
-
     }
     // the node class in our binary search tree
     public class Node
