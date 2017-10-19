@@ -67,22 +67,22 @@ namespace BinarySearchTrees
 
         public void Delete(Node Curr, int data)
         {
-            //if(Curr == null)
-            //{
-            //    Console.WriteLine("current is null?");
-            //    return;
-            //}
-
+            if (Root == null)
+            {
+                Console.WriteLine("The tree is empty!");
+                return;
+            }
 
             if (Curr.Data == data)
             {
                 if (Curr == Root)
                 {
-                    
+                    Root.Data = FindMax(Root.Right);
+                    DestroyRight(Root, Root.Data);
+                    return;
                 }
                 if (Curr.Left == null && Curr.Right == null)
                 {
-                    Console.WriteLine($"Deleting {Curr.Data}");
                     DestroyLeft(Root, data);
                     DestroyRight(Root, data);
                     return;
@@ -90,13 +90,11 @@ namespace BinarySearchTrees
                 else if (Curr.Left != null && Curr.Right == null)
                 {
                     Curr.Data = FindMax(Curr.Left);
-                    Console.WriteLine($"replacement node is {Curr.Data}");
                     DestroyRight(Curr, Curr.Data);
                 }
                 else
                 {
                     Curr.Data = FindMin(Curr.Left);
-                    Console.WriteLine($"replacement node is {Curr.Data}");
                     DestroyLeft(Curr, Curr.Data);
                 }
             }

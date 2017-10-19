@@ -33,7 +33,7 @@ namespace BinarySearchTrees
 
             // change here to delete a different number
             // some are still broken
-            int x = 5;
+            int x = 13;
             Console.WriteLine($"\nSending {x} for deletion.");
             myTree.Delete(myTree.Root, x);
 
