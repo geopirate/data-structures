@@ -70,6 +70,11 @@ namespace BinarySearchTrees
 
         public int FindMin(Node Curr)
         {
+            if (Curr == null)
+            {
+                Console.WriteLine("huh???");
+                return(0);
+            }
             if (Curr.Left != null)
                 return FindMin(Curr.Left);
             else
@@ -86,22 +91,35 @@ namespace BinarySearchTrees
 
         public void Delete(Node Curr, int data)
         {
+            if (Root == null)
+            {
+                Console.WriteLine("The tree is empty!");
+                return;
+            }
+
             if (Curr.Data == data)
             {
+                if (Curr == Root)
+                {
+                    Root.Data = FindMax(Root.Right);
+                    DestroyRight(Root, Root.Data);
+                    return;
+                }
                 if (Curr.Left == null && Curr.Right == null)
                 {
-                    Curr = null;
+                    DestroyLeft(Root, data);
+                    DestroyRight(Root, data);
                     return;
                 }
                 else if (Curr.Left != null && Curr.Right == null)
                 {
                     Curr.Data = FindMax(Curr.Left);
-                    Delete(Curr.Left, Curr.Data);
+                    DestroyRight(Curr, Curr.Data);
                 }
                 else
                 {
                     Curr.Data = FindMin(Curr.Left);
-                    Delete(Curr.Right, Curr.Data);
+                    DestroyLeft(Curr, Curr.Data);
                 }
             }
             else if (Curr.Data > data)
@@ -110,6 +128,28 @@ namespace BinarySearchTrees
                 Delete(Curr.Right, data);
             else
                 Console.WriteLine("Did not find that value");
+        }
+
+        public void DestroyLeft(Node L, int data)
+        {
+            if (L.Left.Data == data)
+            {
+                L.Left = null;
+                return;
+            }
+            else
+                DestroyLeft(L.Left, data);
+        }
+
+        public void DestroyRight(Node R, int data)
+        {
+            if (R.Right.Data == data)
+            {
+                R.Right = null;
+                return;
+            }
+            else
+                DestroyRight(R.Right, data);
         }
 
         public void BreadthOrder(Node Current)
