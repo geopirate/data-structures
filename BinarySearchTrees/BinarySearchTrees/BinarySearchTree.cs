@@ -12,6 +12,28 @@ namespace BinarySearchTrees
         // initializes the tree with a root node
         public BinarySearchTree(int initialRoot) => Root = new Node(initialRoot);
 
+        // initializes the tree with a root node
+        public BinarySearchTree(int[] initialArray)
+        {
+            Root = ArrayToBST(initialArray, 0, initialArray.Length - 1);
+        }
+
+        public Node ArrayToBST(int[] array, int start, int end)
+
+        {
+            if (start > end) { return null; }
+
+            int mid = (int)Math.Floor((start + end) / 2.0);
+
+            Node newNode = new Node(array[mid])
+            {
+                Left = ArrayToBST(array, start, mid - 1),
+                Right = ArrayToBST(array, mid + 1, end)
+            };
+
+            return newNode;
+        }
+
         public void BSTAdd(Node current, int data)
         {
             // left is less

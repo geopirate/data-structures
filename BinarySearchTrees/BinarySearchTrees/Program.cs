@@ -6,25 +6,27 @@ namespace BinarySearchTrees
     {
         static void Main(string[] args)
         {
-            BinarySearchTree myTree = new BinarySearchTree(10);
+            //BinarySearchTree myTree = new BinarySearchTree(10);
+            int[] myArray = new int[] { 4, 8, 15, 16, 23, 42 };
+            BinarySearchTree myTree = new BinarySearchTree(myArray);
 
-            myTree.BSTAdd(myTree.Root, 11);
-            myTree.BSTAdd(myTree.Root, 13);
-            myTree.BSTAdd(myTree.Root, 15);
-            myTree.BSTAdd(myTree.Root, 17);
-            myTree.BSTAdd(myTree.Root, 16);
-            myTree.BSTAdd(myTree.Root, 9);
-            myTree.BSTAdd(myTree.Root, 2);
-            myTree.BSTAdd(myTree.Root, 3);
-            myTree.BSTAdd(myTree.Root, 1);
-            myTree.BSTAdd(myTree.Root, 5);
+            //myTree.BSTAdd(myTree.Root, 11);
+            //myTree.BSTAdd(myTree.Root, 13);
+            //myTree.BSTAdd(myTree.Root, 15);
+            //myTree.BSTAdd(myTree.Root, 17);
+            //myTree.BSTAdd(myTree.Root, 16);
+            //myTree.BSTAdd(myTree.Root, 9);
+            //myTree.BSTAdd(myTree.Root, 2);
+            //myTree.BSTAdd(myTree.Root, 3);
+            //myTree.BSTAdd(myTree.Root, 1);
+            //myTree.BSTAdd(myTree.Root, 5);
 
             /*Console.WriteLine("This traverses a binary tree Breadth Order.");
             myTree.BreadthOrder(myTree.Root);
             Console.WriteLine("\nThis traverses a binary tree Pre Order.");
             myTree.PreOrder(myTree.Root);
             Console.WriteLine("\nThis traverses a binary tree Post Order.");
-            myTree.PostOrder(myTree.Root);*/
+            myTree.PostOrder(myTree.Root);
             Console.WriteLine("\nThis traverses a binary tree In Order.");
             myTree.InOrder(myTree.Root);
 
@@ -34,9 +36,9 @@ namespace BinarySearchTrees
             // change here to delete a different number
             // some are still broken
             int x = 17;
-            Console.WriteLine($"\nSending {x} for deletion.");
+            Console.WriteLine($"\nSending {x} for deletion.");*/
 
-            myTree.Delete(myTree.Root, x);
+            //myTree.Delete(myTree.Root, x);
             Console.WriteLine("\nThis traverses a binary tree In Order.");
             myTree.InOrder(myTree.Root);
 
