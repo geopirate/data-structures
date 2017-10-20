@@ -9,8 +9,32 @@ namespace BinarySearchTrees
         // value of the root leaf (node?)
         public Node Root;
 
-        // initializes the tree with a root node
+        // initializes the tree using an int for the root node
         public BinarySearchTree(int initialRoot) => Root = new Node(initialRoot);
+
+        // initializes the tree using an array
+        public BinarySearchTree(int[] initialArray)
+        {
+            Root = ArrayToBST(initialArray, 0, initialArray.Length - 1);
+        }
+
+        public Node ArrayToBST(int[] array, int start, int end)
+
+        {
+            // once we get to the end this stops the recursive calls
+            if (start > end) { return null; }
+            // this caused a little trouble
+            // using math.floor to yield more consistent results than just dividing
+            int mid = (int)Math.Floor((start + end) / 2.0);
+            // this makes a new node with the medium value and makes recursive calls to create it's child nodes
+            Node newNode = new Node(array[mid])
+            {
+                Left = ArrayToBST(array, start, mid - 1),
+                Right = ArrayToBST(array, mid + 1, end)
+            };
+            // after all of the recursive calls we return the initial node with all the nodes attached to it
+            return newNode;
+        }
 
         public void BSTAdd(Node current, int data)
         {
