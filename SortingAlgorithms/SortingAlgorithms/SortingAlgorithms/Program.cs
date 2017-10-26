@@ -6,19 +6,13 @@ namespace SortingAlgorithms
     {
         static void Main(string[] args)
         {
-            Sort mySorter = new Sort(new int[]{ 7, 11, 3, 42, 9, 12 });
+            // InsertionSort mySorter = new InsertionSort(new int[]{ 7, 11, 3, 42, 9, 12 });
+            MergeSort mySorter = new MergeSort(new int[]{ 7, 11, 3, 42, 9, 12, 2, 5, 15 });
 
-            Console.WriteLine("Unsorted Array: ");
-            foreach(int x in mySorter.arr)
-            {
-                Console.Write($" {x}");
-            }
-
-           Console.WriteLine("\nInsertion sorted Array: ");
-            foreach (int x in mySorter.InsertionSort())
-            {
-                Console.Write($" {x}");
-            }
+            Console.WriteLine("\nUnsorted Array: ");
+            mySorter.Print(mySorter.arr);
+            Console.WriteLine("\nsorted Array: ");
+            mySorter.Print(mySorter.Sort());
 
             Console.Read();
         }

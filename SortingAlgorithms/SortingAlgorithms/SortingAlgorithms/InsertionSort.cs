@@ -4,16 +4,16 @@ using System.Text;
 
 namespace SortingAlgorithms
 {
-    class Sort
+    class InsertionSort
     {
         public int[] arr;
 
-        public Sort(int[] newArray)
+        public InsertionSort(int[] newArray)
         {
             arr = newArray;
         }
 
-        public int[] InsertionSort()
+        public int[] Sort()
         {
             int [] thisArray = arr;
 
@@ -30,6 +30,14 @@ namespace SortingAlgorithms
                 }
             }
             return thisArray;
+        }
+
+        public void Print(int[] printedArray)
+        {
+            foreach (int x in printedArray)
+            {
+                Console.Write($" {x}");
+            }
         }
     }
 }
