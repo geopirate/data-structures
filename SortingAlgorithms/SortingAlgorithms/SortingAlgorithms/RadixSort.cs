@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,50 +16,64 @@ namespace SortingAlgorithms
 
         public int[] Sort()
         {
+            // makes a new array so we retain the original
             int[] thisArray = arr;
+            // gets the number of digits so we can determine how many rounds to queue
             int digits = FindLength(thisArray);
-     
-            for(int i=0; i<digits; i++)
+            // this number helps us get the target digit
+            int p = 1;
+            // for each digit we do a round of enque and dequeue
+            for (int i=0; i<digits; i++)
             {
-                int p = 10;
-
-
+                // sends the array to put in an array of queues and then dequeues all of them into another array
+                thisArray = Dequeue(Enqueue(thisArray, p));
+                // this number increases each time to target the appropriate digit
+                p = p*10;
             }
-            Enqueue(thisArray);
-            Dequeue();
-
+            // returns the sorted array after we are done.
             return thisArray;
         }
-
-        private int[] Enqueue(int[] w)
+        // separates the elements into an array of 10 queues according to the target digit
+        // it accepts the array we are sorting from and the p value used to target the correct digit
+        private Queue<int>[] Enqueue(int[] arrrayToBreak, int p)
         {
-            int v = w.Length / 2;
-            int[] newArray1 = new int[v];
-            int[] newArray2 = new int[w.Length - v];
-
-            for (int i = 0; i < v; i++)
-                newArray1[i] = w[i];
-            Console.WriteLine("\nUnsorted Array1: ");
-            Print(newArray1);
-
-            int u = 0;
-            for (int i = v; i < w.Length; i++)
+            // this initializes an empty array of 10 queues to store our different elements
+            Queue<int>[] buckets = new Queue<int>[10];
+            for (int i = 0; i < buckets.Length; i++)
+                buckets[i] = new Queue<int>();
+            // for every integer in the supplied array, adde it to the appropriate queue
+            foreach(int currentNumber in arrrayToBreak)
             {
-                newArray2[u] = w[i];
-                u++;
+                // dividing by 1/10/100 then getting the mod value returns the digit from the ones/tens/hundreds places respectively
+                int targetedDigit = currentNumber/p % 10;
+                // add the number to the queue that corresponds to the targeted digit
+                buckets[targetedDigit].Enqueue(currentNumber);
             }
-            Console.WriteLine("\nUnsorted Array2: ");
-            Print(newArray2);
-
-            return w;
+            return buckets;
         }
-
-        private int[] Dequeue(int[][] x)
+        // takes an array of queues and puts them into a new array
+        private int[] Dequeue(Queue<int>[] buckets)
         {
+            // new array is the length of the original array
             int[] z = new int[arr.Length];
+            // this keeps track of our place in our new array as we switch buckets
+            int zIndex = 0;
+            // empty each bucket into our new array
+            foreach (Queue<int> thisBucket in buckets)
+            {
+                // this loops through the buckets that have stuff until they are empty
+                while (thisBucket.Count != 0)
+                {
+                    // dequeues the bucket into our new array
+                    z[zIndex] = thisBucket.Dequeue();
+                    // increments the counter for the new array
+                    zIndex++;
+                }
+            }
+            // return the new array containing all of the empty buckets
             return z;
         }
-
+        // converts the integer to a string then counts the length of that string to get the number of digits
         private int FindLength(int [] counter) {
             int z = 0;
             foreach (int x in counter)
