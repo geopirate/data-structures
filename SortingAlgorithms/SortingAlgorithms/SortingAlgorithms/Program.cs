@@ -8,7 +8,8 @@ namespace SortingAlgorithms
         {
             // InsertionSort mySorter = new InsertionSort(new int[]{ 7, 11, 3, 42, 9, 12 });
             // MergeSort mySorter = new MergeSort(new int[]{ 7, 11, 3, 42, 9, 12, 2, 5, 15 });
-            RadixSort mySorter = new RadixSort(new int[] {411, 7, 11, 3, 42, 9, 12, 2, 5, 15, 155, 334  });
+            // RadixSort mySorter = new RadixSort(new int[] {411, 7, 11, 3, 42, 9, 12, 2, 5, 15, 155, 334  });
+            QuickSort mySorter = new QuickSort(new int[] { 28, 40, 16, 13, 41, 5, 39, 11, 22 });
 
             Console.WriteLine("\nUnsorted Array: ");
             mySorter.Print(mySorter.arr);
