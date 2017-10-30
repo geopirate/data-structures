@@ -1,9 +1,9 @@
 What did you learn?
-I learned a lot about trying to implement a merge sort, even if we weren't successful.  I was also able to teach my partner a lot about data structures in general, this took a good chunk of time today....
+I figured out at least conceptually how a quick sort works.
 Explain how you felt before starting the challenge, what did you learn while researching, and how well do you understand the data structure after your self research
-I felt this would be a pretty challenging data structure to implement.  I understand it betrter than when I started, but not completely as we did not come up with a final solution and what we have so far diverges from the model solution.
+I felt this would be a pretty challenging data structure to implement.  I understand it betrter than when I started, but not completely as we did not come up with a final solution.
 Where did you look?
-I just read the first couple paragraphs of the reference material provided, to figure out what we are supposed to do and worked through the challenge time before looking at the code when I got home.
+I just read through the reference material provided, to figure out what we are supposed to do, and still didn't quite understand.
 Be specific, what sites? resources? Books?
 See previous answer.
 What notes did you use to help you successfully complete the challenge?
