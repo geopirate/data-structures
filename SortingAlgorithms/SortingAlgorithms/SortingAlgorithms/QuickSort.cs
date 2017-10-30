@@ -19,13 +19,32 @@ namespace SortingAlgorithms
             int[] thisArray = arr;
 
             int pivot = thisArray[thisArray.Length-1];
+            int lower = -1;
+            int pointer = 0;
 
+            while (lower < thisArray.Length - 1)
+            {
+                if( thisArray[pointer] < pivot)
+                {
+                    lower++;
+                    if (thisArray[lower] > thisArray[pointer])
+                    {
+                        int temp = thisArray[lower];
+                        thisArray[lower] = thisArray[pointer];
+                        thisArray[pointer] = temp;
+                    }
 
+                }
+            }
+
+            Print(thisArray);
+
+            //if ()
 
             //Console.WriteLine(pivot);
             return thisArray;
         }
-        private int Partition()
+        private int Partition(int pivot)
         {
 
             return pivot;
