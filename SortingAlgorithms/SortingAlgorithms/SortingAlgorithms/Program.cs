@@ -14,7 +14,7 @@ namespace SortingAlgorithms
             Console.WriteLine("\nUnsorted Array: ");
             mySorter.Print(quickArray);
             Console.WriteLine("\nsorted Array: ");
-            mySorter.Print(mySorter.Sort(quickArray, 0, quickArray[quickArray.Length - 1]));
+            mySorter.Print(mySorter.Sort(quickArray, 0, quickArray.Length - 1));
 
             Console.Read();
         }
