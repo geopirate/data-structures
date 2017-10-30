@@ -6,47 +6,37 @@ namespace SortingAlgorithms
 {
     class QuickSort
     {
-        public int[] arr;
-
-        public QuickSort(int[] newArray)
-        {
-            arr = newArray;
-        }
-
-        public int[] Sort()
+        public int[] Sort(int [] arr, int pointer, int pivot )
         {
             // makes a new array so we retain the original
-            int[] thisArray = arr;
 
-            int pivot = thisArray[thisArray.Length-1];
             int lower = -1;
-            int pointer = 0;
 
-            while (pointer < thisArray.Length - 1)
+            while (pointer < arr.Length - 1)
             {
-                if( thisArray[pointer] < pivot)
+                if( arr[pointer] < pivot)
                 {
                     lower++;
-                    if (thisArray[lower] > thisArray[pointer])
+                    if (arr[lower] > arr[pointer])
                     {
-                        int temp = thisArray[lower];
-                        thisArray[lower] = thisArray[pointer];
-                        thisArray[pointer] = temp;
+                        int temp = arr[lower];
+                        arr[lower] = arr[pointer];
+                        arr[pointer] = temp;
                     }
 
                 }
                 pointer++;
                 Console.WriteLine("\nIn Progress Array: ");
-                Print(thisArray);
+                Print(arr);
             }
-            thisArray[thisArray.Length - 1] = thisArray[lower + 1];
-            thisArray[lower + 1] = pivot;
+            arr[arr.Length - 1] = arr[lower + 1];
+            arr[lower + 1] = pivot;
             //Print(thisArray);
 
             //if ()
 
             //Console.WriteLine(pivot);
-            return thisArray;
+            return arr;
         }
         private int Partition(int pivot)
         {
