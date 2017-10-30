@@ -22,7 +22,7 @@ namespace SortingAlgorithms
             int lower = -1;
             int pointer = 0;
 
-            while (lower < thisArray.Length - 1)
+            while (pointer < thisArray.Length - 1)
             {
                 if( thisArray[pointer] < pivot)
                 {
@@ -35,9 +35,13 @@ namespace SortingAlgorithms
                     }
 
                 }
+                pointer++;
+                Console.WriteLine("\nIn Progress Array: ");
+                Print(thisArray);
             }
-
-            Print(thisArray);
+            thisArray[thisArray.Length - 1] = thisArray[lower + 1];
+            thisArray[lower + 1] = pivot;
+            //Print(thisArray);
 
             //if ()
 
