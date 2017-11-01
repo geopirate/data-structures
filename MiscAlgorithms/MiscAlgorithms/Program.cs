@@ -7,13 +7,19 @@ namespace MiscAlgorithms
         static void Main(string[] args)
         {
             AssociativeArray newAA = new AssociativeArray();
+            State wash = new State("WA", "Olympia");
 
-            newAA.Add("Monkey");
-            newAA.Add("Rabbit");
-            Console.WriteLine($"{newAA.Search("Monkey")}");
-            Console.WriteLine($"{newAA.Delete("Rabbit")}");
+            newAA.Add(new State("OR", "Salem"));
+            newAA.Add(wash);
+            newAA.Add(new State("TX", "Austin"));
+            newAA.Add(new State("NY", "Albany"));
+            newAA.SearchKey("TX");
 
+            newAA.Print();
 
+            newAA.Delete(wash);
+
+            newAA.Print();
 
             Console.Read();
         }
