@@ -6,7 +6,16 @@ namespace MiscAlgorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            AssociativeArray newAA = new AssociativeArray();
+
+            newAA.Add("Monkey");
+            newAA.Add("Rabbit");
+            Console.WriteLine($"{newAA.Search("Monkey")}");
+            Console.WriteLine($"{newAA.Delete("Rabbit")}");
+
+
+
+            Console.Read();
         }
     }
 }
