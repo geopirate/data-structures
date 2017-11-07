@@ -9,18 +9,29 @@ namespace TowerOfHanoi
         Stack<Disk> Left = new Stack<Disk>();
         Stack<Disk> Middle = new Stack<Disk>();
         Stack<Disk> Right = new Stack<Disk>();
+        int N;
 
         public Tower(int n)
         {
+            N = n;
             for(int i=1; i<=n; i++)
             {
-                Left.Push(new Disk(i));
+                Right.Push(new Disk(i));   
             }
+            for (int i = 1; i <= n; i++)
+            {
+                Left.Push(Right.Pop());
 
-            if(n%2 == 0)
+            }
+        }
+
+        public void Shift()
+        {
+            if (N % 2 == 0)
             {
                 ShiftEven();
-            } else
+            }
+            else
             {
                 ShiftOdd();
             }
@@ -30,16 +41,20 @@ namespace TowerOfHanoi
         {
             Right.Push(Left.Pop());
 
-            while(Left.Peek() != null && Middle.Peek() != null)
+            while (Left.Count != 0 || Middle.Count != 0)
             {
-                if (Left.Peek() != null && Right.Peek() != null && Middle.Peek() == null)
+                Print();
+
+                if (Left.Count != 0 && Right.Count != 0 && Middle.Count == 0)
                 {
                     Middle.Push(Left.Pop());
                 }
-                else if (Left.Peek().value > Middle.Peek().value && Right.Peek() == null) {
+                else if (Left.Peek().value > Middle.Peek().value && Right.Count == 0) {
                     Right.Push(Left.Pop());
                 }
             }
+            Console.WriteLine("Final Form\n");
+            Right.Push(Left.Pop());
         }
 
         private void ShiftEven()
@@ -47,9 +62,25 @@ namespace TowerOfHanoi
 
         }
 
-        private void Print()
+        public void Print()
         {
-            Console.WriteLine(Left.)
+            Console.Write("\n\nL :");
+            foreach (Disk x in Left)
+            {
+                Console.Write($" {x.value}");
+            }
+
+            Console.Write("\nM :");
+            foreach (Disk x in Middle)
+            {
+                Console.Write($" {x.value}");
+            }
+            Console.Write("\nR :");
+            foreach (Disk x in Right)
+            {
+                Console.Write($" {x.value}");
+            }
+
         }
 
     }
