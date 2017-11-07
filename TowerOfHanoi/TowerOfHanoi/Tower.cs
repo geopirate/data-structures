@@ -14,23 +14,26 @@ namespace TowerOfHanoi
         public Tower(int n)
         {
             N = n;
+            // create the number of disks we need and put them in a stack
             for(int i=1; i<=n; i++)
             {
                 Right.Push(new Disk(i));   
             }
+            // push them to another stack to reverse the order
             for (int i = 1; i <= n; i++)
             {
                 Left.Push(Right.Pop());
-
             }
         }
 
         public void Shift()
         {
+            // for even numbers we start in the middle
             if (N % 2 == 0)
             {
                 ShiftEven();
             }
+            // for odd numbers we start on the right
             else
             {
                 ShiftOdd();
@@ -46,15 +49,26 @@ namespace TowerOfHanoi
                 Print();
 
                 if (Left.Count != 0 && Right.Count != 0 && Middle.Count == 0)
-                {
-                    Middle.Push(Left.Pop());
-                }
-                else if (Left.Peek().value > Middle.Peek().value && Right.Count == 0) {
+                    if (Left.Peek().value > Right.Peek().value)
+                        Middle.Push(Left.Pop());
+                    else        
+                        Right.Push(Left.Pop());
+                else if (Right.Count == 0 && Left.Peek().value > Middle.Peek().value)
                     Right.Push(Left.Pop());
-                }
+                else if (Left.Count == 0 && Middle.Peek().value < Right.Peek().value)
+                    Left.Push(Middle.Pop());
+                else if (Left.Peek().value > Middle.Peek().value && Left.Peek().value > Right.Peek().value)
+                    Middle.Push(Right.Pop());
+
+                else if (Middle.Peek().value < Right.Peek().value)
+                    Right.Push(Middle.Pop());
+                else if (Left.Peek().value < Right.Peek().value)
+                    Right.Push(Left.Pop());
+                else
+                    Console.WriteLine("Error ???");
             }
-            Console.WriteLine("Final Form\n");
-            Right.Push(Left.Pop());
+            Console.Write("\n\nFinal Form");
+            Print();
         }
 
         private void ShiftEven()
@@ -80,7 +94,6 @@ namespace TowerOfHanoi
             {
                 Console.Write($" {x.value}");
             }
-
         }
 
     }
