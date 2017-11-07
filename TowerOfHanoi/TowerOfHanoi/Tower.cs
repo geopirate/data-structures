@@ -28,7 +28,18 @@ namespace TowerOfHanoi
 
         private void ShiftOdd()
         {
-            if
+            Right.Push(Left.Pop());
+
+            while(Left.Peek() != null && Middle.Peek() != null)
+            {
+                if (Left.Peek() != null && Right.Peek() != null && Middle.Peek() == null)
+                {
+                    Middle.Push(Left.Pop());
+                }
+                else if (Left.Peek().value > Middle.Peek().value && Right.Peek() == null) {
+                    Right.Push(Left.Pop());
+                }
+            }
         }
 
         private void ShiftEven()
@@ -36,11 +47,16 @@ namespace TowerOfHanoi
 
         }
 
+        private void Print()
+        {
+            Console.WriteLine(Left.)
+        }
+
     }
 
     class Disk
     {
-        int value;
+        public int value;
 
         public Disk(int newValue)
         {
