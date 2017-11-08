@@ -22,15 +22,31 @@ namespace MiscAlgorithms
 
         public Animal Adopt(string input)
         {
-            if(input == "cat")
+            Console.Write($"\nYou selected {input} and adopted ");
+            if (input == "cat")
+            {
+                Console.Write($"{Cat.Peek().Type} {Cat.Peek().Arrival}.");
                 return Cat.Dequeue();
+            }
+
             if (input == "dog")
+            {
+                Console.Write($"{Dog.Peek().Type} {Dog.Peek().Arrival}.");
                 return Dog.Dequeue();
+            }
             else
+            {
                 if (Cat.Peek().Arrival < Dog.Peek().Arrival)
+                {
+                    Console.Write($"{Cat.Peek().Type} {Cat.Peek().Arrival}.");
                     return Cat.Dequeue();
+                }
                 else
+                {
+                    Console.Write($"{Dog.Peek().Type} {Dog.Peek().Arrival}.");
                     return Dog.Dequeue();
+                }
+            }
         }
 
         public void Print()
@@ -38,12 +54,12 @@ namespace MiscAlgorithms
             Console.Write("\nCats : ");
             foreach ( Animal x in Cat)
             {
-                Console.Write($"{x.Arrival}-{x.Type} ");
+                Console.Write($"{x.Type} {x.Arrival} ");
             }
             Console.Write("\nDogs : ");
             foreach (Animal x in Dog)
             {
-                Console.Write($"{x.Arrival}-{x.Type} ");
+                Console.Write($"{x.Type} {x.Arrival} ");
             }
             Console.WriteLine();
         }

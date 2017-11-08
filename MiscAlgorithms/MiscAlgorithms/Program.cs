@@ -30,15 +30,15 @@ namespace MiscAlgorithms
             shelter.Load("cat");
             shelter.Load("dog");
 
-            Console.Write($"\nAdopted {shelter.Adopt("cat").Type}.");
+            shelter.Adopt("cat");
             shelter.Print();
-            Console.WriteLine($"\nAdopted {shelter.Adopt("dog").Type}.");
+            shelter.Adopt("dog");
             shelter.Print();
-            Console.WriteLine($"\nAdopted {shelter.Adopt("monkey").Type}.");
+            shelter.Adopt("monkey");
             shelter.Print();
-            Console.WriteLine($"\nAdopted {shelter.Adopt("turtle").Type}.");
+            shelter.Adopt("turtle");
             shelter.Print();
-            Console.WriteLine($"\nAdopted {shelter.Adopt("fish").Type}.");
+            shelter.Adopt("fish");
             shelter.Print();
 
 
