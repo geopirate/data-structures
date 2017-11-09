@@ -8,7 +8,7 @@ namespace PrintLetters
         {
             Console.WriteLine("Hello World!");
 
-            int n = 4;
+            int n = 3;
             PrintLetters MyLetters = new PrintLetters(n);
             MyLetters.Traversal();
 

@@ -28,17 +28,12 @@ namespace PrintLetters
 
         public void Traversal()
         {
-            for (int q = N; q > 0; q--)
+            for (int q = N-1; q > 0; q--)
             {
+                Console.Write($"{new string(Letters)} ");
 
                 for (int i = 0; i < q; i++)
                 {
-                    if (q == N)
-                    {
-                        Console.Write($"{new string(Letters)} ");
-
-                        continue;
-                    }
                     char temp = Letters[i];
                     Letters[i] = Letters[i + 1];
                     Letters[i + 1] = temp;
