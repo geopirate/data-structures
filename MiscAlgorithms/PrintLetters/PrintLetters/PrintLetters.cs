@@ -6,17 +6,22 @@ namespace PrintLetters
 {
     class PrintLetters
     {
+        static char[] ALPHABET = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
         char[] Letters;
         int N;
         int P = 0;
 
-        public PrintLetters(string letters)
+        public PrintLetters(int n)
         {
-            Letters = letters.ToCharArray();
-            N = letters.Length;
+            N = n;
+            Letters = new char[N];
+            foreach(char x in Letters)
+            {
+                Letters[x] = ALPHABET[x];
+            }
         }
 
-        private int Traversal()
+        private void Traversal()
         {
 
         }
