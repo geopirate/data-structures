@@ -19,19 +19,21 @@ namespace PrintLetters
             N = n;
             // creats array of the length of the number given
             Letters = new char[N];
-            // puts the corresponding letter in our new array for the affected letters
+            // puts the corresponding letter in our new array for each of the affected letters
             for(int i = 0; i<n; i++)
             {
                 Letters[i] = ALPHABET[i];
             }
         }
 
+        // manipulates our array for the various combinations
         public void Traversal()
         {
+            // outer loop reduces the scope to avoid duplicates
             for (int q = N-1; q > 0; q--)
             {
                 Console.Write($"{new string(Letters)} ");
-
+                // inner loop switches the order of the letters
                 for (int i = 0; i < q; i++)
                 {
                     char temp = Letters[i];
