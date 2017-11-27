@@ -12,10 +12,9 @@ namespace Matrix
         static int m;
         static int n;
 
-        // constructor that creates the matrix to zero
+        // constructor that creates the matrix to all 7s
         public Zero(int M, int N)
         {
-            int k = 11;
             m = M - 1;
             n = N - 1;
 
@@ -24,15 +23,35 @@ namespace Matrix
             {
                 for (int j = 0; j < N; j++)
                 {
-                    matrix[i, j] = k;
-                    k++;
+                    matrix[i, j] = 7;
+                }
+            }
+        }
+
+        public void ZeroOut() {
+            for (int i = 0; i <= m; i++)
+            {
+                for (int j = 0; j <= n; j++)
+                {
+                    if (matrix[i, j] == 0) {
+                        for (int ii = 0; ii <= m; ii++)
+                        {
+                            matrix[ii, j] = 0;
+                        }
+                        for (int jj = 0; jj <= n; jj++)
+                        {
+                            matrix[i, jj] = 0;
+                        }
+                        return;
+                    }
                 }
             }
         }
 
         public void SetZero(int down, int across)
         {
-            matrix[across, down] = 0;
+            matrix[down, across] = 0;
+
             return;
         }
 

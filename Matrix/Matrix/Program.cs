@@ -11,16 +11,21 @@ namespace Matrix
             // change the M or N value to change the size of the matrix
             int M = 5;
             int N = 6;
-            // creates a matrix using an iterator starting at 11 of size M x N as requested
+            // creates a matrix setting all values to 7 for easier printing of size M x N as requested
             Zero zero = new Zero(M, N);
 
             Console.WriteLine("\nStarter: ");
             zero.Print();
 
             // set the selected element to zero
-            zero.SetZero(2,3);
+            // as these are zero indexes, max value is one less than M,N
+            zero.SetZero(4,5);
 
             Console.WriteLine("\nZero Added: ");
+            zero.Print();
+
+            Console.WriteLine("\nZero Lines: ");
+            zero.ZeroOut();
             zero.Print();
 
             // Rotate code
