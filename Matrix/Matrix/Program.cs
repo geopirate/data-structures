@@ -17,6 +17,12 @@ namespace Matrix
             Console.WriteLine("\nStarter: ");
             zero.Print();
 
+            // set the selected element to zero
+            zero.SetZero(2,3);
+
+            Console.WriteLine("\nZero Added: ");
+            zero.Print();
+
             // Rotate code
             //Console.WriteLine("Given an NxN matrix write a method to rotate the image by 90 degrees.");
             //Console.WriteLine("Can you do this in-place ?                            You're welcome.");

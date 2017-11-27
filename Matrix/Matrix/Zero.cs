@@ -30,6 +30,12 @@ namespace Matrix
             }
         }
 
+        public void SetZero(int down, int across)
+        {
+            matrix[across, down] = 0;
+            return;
+        }
+
         public void Print()
         {
             for (int d = 0; d <= m; d++)
