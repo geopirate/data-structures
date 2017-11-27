@@ -13,11 +13,21 @@ namespace Matrix
         static int n;
 
         // constructor that creates the matrix to zero
-        public Zero(int[,] mat)
+        public Zero(int M, int N)
         {
-            matrix = mat;
-            n = matrix.GetLength(0);
-            m = matrix.GetLength(1);
+            int k = 11;
+            m = M - 1;
+            n = N - 1;
+
+            matrix = new int[M, N];
+            for (int i = 0; i < M; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    matrix[i, j] = k;
+                    k++;
+                }
+            }
         }
 
         public void Print()
